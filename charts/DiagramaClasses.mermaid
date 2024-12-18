@@ -1,0 +1,56 @@
+classDiagram
+    class User {
+        +int id
+        +String username
+        +String password
+        +String email
+        +int id_rol
+    }
+
+    class Rol {
+        +int id
+        +String type_rol
+    }
+
+    class RelationUserChild {
+        +int user_id
+        +int child_id
+        +int rol_id
+    }
+
+    class Child {
+        +int id
+        +String child_name
+        +int sleep_average
+        +int treatment_id
+        +int time
+    }
+
+    class Treatment {
+        +int id
+        +String name
+    }
+
+    class Tap {
+        +int id
+        +int child_id
+        +int status_id
+        +int user_id
+        +datetime init
+        +datetime end
+    }
+
+    class Status {
+        +int id
+        +String name
+    }
+
+    %% Relaciones entre las clases
+    User --> Rol : id_rol
+    User --> RelationUserChild : user_id
+    RelationUserChild --> Child : child_id
+    RelationUserChild --> Rol : rol_id
+    Child --> Treatment : treatment_id
+    Child --> Tap : child_id
+    Tap --> Status : status_id
+    Tap --> User : user_id
