@@ -1,5 +1,5 @@
 # Requeriments Tècnics
-
+---
 ## 1. Backend (Servidor i Gestió de Dades)
 El backend serà el cor del sistema, encarregat de gestionar dades, usuaris, i la lògica del sistema.
 
