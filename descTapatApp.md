@@ -8,3 +8,17 @@ A més del tractament amb lents de contacte d'alta graduació i, posteriorment, 
 Durant aquesta etapa, el tractament amb pegat varia en funció de l'edat del nen. S'inicia aplicant-lo durant la meitat del temps que el nen estigui despert durant els primers mesos de vida i es continua amb un temps fix diari que estableix l'oftalmòleg. La dificultat real d'aquest procés rau en controlar el nombre de minuts que el nen porta o li queda per portar el pegat, ja que el seu patró de son és variable i freqüent durant el dia. Moltes famílies manifesten la dificultat de gestionar aquest temps a causa de les freqüents migdiades dels petits i la incertesa de quan es tornaran a adormir al llarg del dia.
 
 L'objectiu de TapatApp és proporcionar a totes les famílies afectades per cataracta congènita, o per qualsevol patologia que requereixi pegat ocular, una eina senzilla i gratuïta que els ajudi a seguir aquest tractament de manera equilibrada. Això permet obtenir el màxim desenvolupament de l'agudesa visual.
+
+## Objectius del Projecte
+- Controlar el temps que el nen porta el pegat ocular.
+- Desenvolupar una aplicació mòbil per a Android.
+- Diferenciar entre el temps relatiu del pegat per a infants menors de 6 mesos i el temps absolut per a nens més grans de 6 mesos.
+- Crear una aplicació multiusuari que permeti a diversos cuidadors gestionar el control del tractament.
+- Restar el temps que el nen passa adormit.
+- Implementar un sistema intel·ligent (intel·ligència artificial) amb notificacions per preveure quan el pegat està a punt de completar el seu temps.
+
+## Requeriments Funcionals del Projecte
+- Servidor per allotjar la part de backend.
+- Desenvolupar el backend de l'aplicació amb serveis web.
+- Desenvolupar el frontend de l'aplicació mòbil.
+- Possibilitat de crear una web quan l'aplicació estigui en producció.
