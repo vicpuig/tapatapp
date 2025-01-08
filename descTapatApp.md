@@ -1,4 +1,4 @@
-Descripció del Projecte TapatApp
+# Descripció del Projecte TapatApp
 Una cataracta congènita és l'opacitat del cristal·lí de l'ull present des del naixement. La incidència de cataracta congènita és d'aproximadament 3 de cada 10.000 nens al cap d'un any de vida. A l'Hospital de Sant Joan de Déu s'han operat al voltant de 100 cataractes infantils durant l'últim any. Les cataractes són la causa més freqüent de ceguesa tractable en la infància, i es calcula que hi ha al voltant de 200.000 nens cecs per cataractes arreu del món.
 
 L'ull amb cataracta congènita, un cop operat, ha de seguir un règim exhaustiu de rehabilitació per evitar l'ambliopia, coneguda comunament com a "ull gandul". Aquí és on TapatApp! vol ajudar.
