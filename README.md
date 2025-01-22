@@ -5,7 +5,7 @@
 [Requeriments Tècnics](requerimentsTecnics.md)
 
 ## Prototip 1:
-[Diagrama Prototip 1](diagramaPrototip.mermaid)
+[Diagrama Prototip 1](charts/diagramaPrototip.mermaid)
 
 ### Definició dels EndPoint
 - Descripció: Servei que consulta un User per Username
