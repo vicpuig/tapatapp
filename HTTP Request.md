@@ -55,7 +55,7 @@ Els MIME types (Multipurpose Internet Mail Extensions) són estàndards utilitza
 multipart/form-data és un tipus de MIME utilitzat principalment per enviar formularis HTML que contenen fitxers o dades binàries (per exemple, imatges, documents, etc.). Aquest tipus de codificació permet enviar diversos tipus de dades (com text i fitxers) en una sola petició HTTP. És el més utilitzat en formularis que permeten la càrrega de fitxers.
 
 Petició Http POST
-<form action="https://example.com/upload" method="POST" enctype="multipart/form-data">
+<form action="https://example.com/upload" method="POST" enctype="multipart/form-data"> \n
     <label for="name">Nom:</label>
     <input type="text" id="name" name="name" value="Joan">
     <br>
