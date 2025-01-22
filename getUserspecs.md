@@ -1,7 +1,0 @@
-Descripció: Servei que consulta un User per Username
-End-point: /prototip/getuser
-Method: GET
-Parametres: username
-Resposta:
-Code 200 Ok: {id=1,"username:"user1","password:"123456","email:"mail@gmail.com"}
-Code 400 No trobat: {"error":"No trobat"}
