@@ -54,64 +54,8 @@ Els MIME types (Multipurpose Internet Mail Extensions) són estàndards utilitza
 ### 1. multipart/form-data
 multipart/form-data és un tipus de MIME utilitzat principalment per enviar formularis HTML que contenen fitxers o dades binàries (per exemple, imatges, documents, etc.). Aquest tipus de codificació permet enviar diversos tipus de dades (com text i fitxers) en una sola petició HTTP. És el més utilitzat en formularis que permeten la càrrega de fitxers.
 
-Petició Http POST
-<form action="https://example.com/upload" method="POST" enctype="multipart/form-data"> \n
-    <label for="name">Nom:</label>
-    <input type="text" id="name" name="name" value="Joan">
-    <br>
-    <label for="file">Selecciona una imatge:</label>
-    <input type="file" id="file" name="file">
-    <br>
-    <input type="submit" value="Enviar">
-</form>
-
-es genera una petició POST
-
-POST /upload HTTP/1.1
-Host: example.com
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Length: 5000
-
-
-----WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="name"
-
-
-Joan
-----WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="image.jpg"
-Content-Type: image/jpeg
-
-
-(binary data of the image)
-----WebKitFormBoundary7MA4YWxkTrZu0gW--
-
-
 ### 2. application/x-www-form-urlencoded
 application/x-www-form-urlencoded és el tipus de codificació per defecte utilitzat quan s’envien dades a través d’un formulari HTML utilitzant el mètode POST (o GET en alguns casos). Les dades s’envien com a una cadena de text amb parelles clau-valor, on les claus i els valors estan separats per = i cada parella es separa per &.
 
-Exemple petició Http  POST:
-
-POST /submit HTTP/1.1
-Host: example.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 27
-
-
-username=John+Doe&age=30&city=New+York
-
-
 ### 3. application/json
 application/json és el tipus MIME utilitzat per enviar dades en format JSON. JSON (JavaScript Object Notation) és un format lleuger per emmagatzemar i transportar dades, àmpliament utilitzat en API RESTful i serveis web moderns. Aquest tipus s’utilitza per a la comunicació entre clients i servidors que requereixen enviar dades estructurades de forma més complexa, com objects o arrays.
-
-POST /submit HTTP/1.1
-Host: example.com
-Content-Type: application/json
-Content-Length: 42
-
-
-{
-  "username": "John Doe",
-  "age": 30,
-  "city": "New York"
-}
