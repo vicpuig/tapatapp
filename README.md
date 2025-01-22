@@ -7,6 +7,8 @@
 ## Prototip 1:
 [Diagrama Prototip 1](charts/diagramaPrototip.mermaid)
 
+---
+
 [HTTP Request](HTTPRequest.md)
 
 [HTTP Response](HTTPResponse.md)
