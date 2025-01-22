@@ -46,45 +46,45 @@ El body de la resposta conté les dades que el servidor vol enviar al client. El
 
 ### 1. Codi d'estat 1xx - Informatius
 Els codis d'estat de la categoria 1xx indiquen que el servidor ha rebut la petició i que s'està processant. Són codis informatius, que normalment no s'utilitzen en la comunicació entre el navegador i el servidor.
--100 Continue: El servidor ha rebut la primera part de la petició i el client pot continuar enviant la resta.
--101 Switching Protocols: El servidor accepta canviar el protocol seguint la petició del client (per exemple, de HTTP/1.1 a HTTP/2).
+- 100 Continue: El servidor ha rebut la primera part de la petició i el client pot continuar enviant la resta.
+- 101 Switching Protocols: El servidor accepta canviar el protocol seguint la petició del client (per exemple, de HTTP/1.1 a HTTP/2).
 
 ### 2. Codi d'estat 2xx - OK
 Els codis de la categoria 2xx indiquen que la petició s'ha processat correctament i que el servidor ha retornat una resposta satisfactòria.
--200 OK: La petició ha estat exitosa. El cos de la resposta conté els resultats sol·licitats.
--201 Created: La petició ha estat exitosa i ha creat un nou recurs (com en una petició POST per afegir un element).
--202 Accepted: La petició ha estat acceptada, però encara no s'ha processat.
--204 No Content: La petició ha estat processada correctament, però no hi ha contingut per retornar (per exemple, després d'una petició DELETE).
+- 200 OK: La petició ha estat exitosa. El cos de la resposta conté els resultats sol·licitats.
+- 201 Created: La petició ha estat exitosa i ha creat un nou recurs (com en una petició POST per afegir un element).
+- 202 Accepted: La petició ha estat acceptada, però encara no s'ha processat.
+- 204 No Content: La petició ha estat processada correctament, però no hi ha contingut per retornar (per exemple, després d'una petició DELETE).
 
 ### 3. Codi d'estat 3xx - Redirecció
 Els codis de la categoria 3xx indiquen que el client ha de realitzar una altra acció per completar la petició. En general, aquests codis impliquen que el client ha de ser redirigit a una altra URL.
--301 Moved Permanently: El recurs sol·licitat ha estat mogut de manera permanent a una nova URL.
--302 Found (anteriorment anomenat "Moved Temporarily"): El recurs sol·licitat es troba temporalment en una URL diferent.
--303 See Other: El client ha de realitzar una petició GET a una altra URL per obtenir el recurs.
--304 Not Modified: El recurs no s'ha modificat des de la darrera sol·licitud. Això pot ser útil per a la caché del navegador.
--307 Temporary Redirect: El recurs ha estat mogut temporalment a una nova URL, però el mètode de la petició ha de ser mantingut.
--308 Permanent Redirect: El recurs ha estat mogut permanentment a una nova URL, i el mètode de la petició ha de ser mantingut.
+- 301 Moved Permanently: El recurs sol·licitat ha estat mogut de manera permanent a una nova URL.
+- 302 Found (anteriorment anomenat "Moved Temporarily"): El recurs sol·licitat es troba temporalment en una URL diferent.
+- 303 See Other: El client ha de realitzar una petició GET a una altra URL per obtenir el recurs.
+- 304 Not Modified: El recurs no s'ha modificat des de la darrera sol·licitud. Això pot ser útil per a la caché del navegador.
+- 307 Temporary Redirect: El recurs ha estat mogut temporalment a una nova URL, però el mètode de la petició ha de ser mantingut.
+- 308 Permanent Redirect: El recurs ha estat mogut permanentment a una nova URL, i el mètode de la petició ha de ser mantingut.
 
 ### 4. Codi d'estat 4xx - Errors del client
 Els codis de la categoria 4xx indiquen que hi ha un problema amb la petició del client. Potser falta informació o hi ha errors en la sol·licitud.
--400 Bad Request: La petició és mal formada o conté dades incorrectes.
--401 Unauthorized: El client no ha proporcionat les credencials correctes per accedir a un recurs protegit.
--403 Forbidden: El servidor entén la petició, però es nega a autoritzar-la. Potser el client no té permisos.
--404 Not Found: El recurs sol·licitat no es troba al servidor.
--405 Method Not Allowed: El mètode de la petició (com GET, POST, DELETE, etc.) no és permès per al recurs sol·licitat.
--408 Request Timeout: El servidor ha superat el temps límit per processar la petició.
--409 Conflict: La petició no es pot completar a causa d'un conflicte amb l'estat actual del recurs.
--413 Payload Too Large: La petició és massa gran per ser processada pel servidor.
--414 URI Too Long: La URL sol·licitada és massa llarga.
--415 Unsupported Media Type: El servidor no admet el tipus de contingut de la petició.
--429 Too Many Requests: El client ha fet massa peticions en un temps curt.
+- 400 Bad Request: La petició és mal formada o conté dades incorrectes.
+- 401 Unauthorized: El client no ha proporcionat les credencials correctes per accedir a un recurs protegit.
+- 403 Forbidden: El servidor entén la petició, però es nega a autoritzar-la. Potser el client no té permisos.
+- 404 Not Found: El recurs sol·licitat no es troba al servidor.
+- 405 Method Not Allowed: El mètode de la petició (com GET, POST, DELETE, etc.) no és permès per al recurs sol·licitat.
+- 408 Request Timeout: El servidor ha superat el temps límit per processar la petició.
+- 409 Conflict: La petició no es pot completar a causa d'un conflicte amb l'estat actual del recurs.
+- 413 Payload Too Large: La petició és massa gran per ser processada pel servidor.
+- 414 URI Too Long: La URL sol·licitada és massa llarga.
+- 415 Unsupported Media Type: El servidor no admet el tipus de contingut de la petició.
+- 429 Too Many Requests: El client ha fet massa peticions en un temps curt.
 
 ### 5. Codi d'estat 5xx - Errors del servidor
 Els codis de la categoria 5xx indiquen que hi ha un problema amb el servidor que impedeix processar la petició, fins i tot si la petició era vàlida.
 - 500 Internal Server Error: Error general del servidor. El servidor no ha pogut completar la petició per una raó desconeguda.
 - 501 Not Implemented: El servidor no suporta la funció necessària per processar la petició.
 - 502 Bad Gateway: El servidor, actuant com a passarel·la o proxy, ha rebut una resposta no vàlida d'un servidor ascendent.
--503 Service Unavailable: El servidor no està disponible temporalment, possiblement per sobrecàrrega o manteniment.
--504 Gateway Timeout: El servidor, actuant com a passarel·la o proxy, no ha rebut una resposta a temps d'un servidor ascendent.
--505 HTTP Version Not Supported: El servidor no admet la versió del protocol HTTP utilitzada en la petició.
+- 503 Service Unavailable: El servidor no està disponible temporalment, possiblement per sobrecàrrega o manteniment.
+- 504 Gateway Timeout: El servidor, actuant com a passarel·la o proxy, no ha rebut una resposta a temps d'un servidor ascendent.
+- 505 HTTP Version Not Supported: El servidor no admet la versió del protocol HTTP utilitzada en la petició.
 
