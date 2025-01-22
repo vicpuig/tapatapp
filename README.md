@@ -7,8 +7,8 @@
 ## Prototip 1:
 [Diagrama Prototip 1](charts/diagramaPrototip.mermaid)
 
-[HTTP Request](HTTP Request.md)
-[HTTP Response](HTTP Response.md)
+[HTTP Request](HTTPRequest.md)
+[HTTP Response](HTTPResponse.md)
 
 ### Definició dels EndPoint
 - Descripció: Servei que consulta un User per Username
