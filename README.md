@@ -16,4 +16,4 @@
 ### Definició dels EndPoint
 | Descripció  | End-point     | Method     |Tipus de petició|Parametres| resposta|
 | :---        |  :---        |  :---        |  :---         |  :---     |  :--- | 
-| Servei que consulta un User per Username | /prototip/getuser | GET | application/json  | username |  {"id":1, "email":"victor@gmail.com","username":"usuari1","password":"12345"}      |
+| Servei que consulta un User per Username | /prototip/getuser | GET | application/json  | username |  {"id":1, "email":"victor@gmail.com", "username":"usuari1", "password":"12345"}      |
