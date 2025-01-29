@@ -18,7 +18,7 @@
 | :---        |  :---        |  :---        |  :---         |  :---     | 
 | Servei que consulta un User per Username | /prototip/getuser | GET | application/json  | username |  
 
-Code 200 Ok: {"id":1, "email":"victor@gmail.com", "username":"usuari1", "password":"12345"} 
-Code 400 No trobat: {"error":"No trobat"} -> Quan no introdueixes cap parametre.
-Code 404 No trobat: {"error":"No trobat"} -> Quan introdueixes un usuername que no correspon als de la llisa d'Usuaris
-Code 500 Error de server: {"error": "Error inesperat","detalls":str(e)} -> Quan peta el servidor
+Code 200 Ok: {"id":1, "email":"victor@gmail.com", "username":"usuari1", "password":"12345"} <br>
+Code 400 No trobat: {"error":"No trobat"} -> Quan no introdueixes cap parametre. <br>
+Code 404 No trobat: {"error":"No trobat"} -> Quan introdueixes un usuername que no correspon als de la llisa d'Usuaris <br>
+Code 500 Error de server: {"error": "Error inesperat","detalls":str(e)} -> Quan peta el servidor <br>
