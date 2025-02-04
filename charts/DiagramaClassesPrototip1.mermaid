@@ -1,12 +1,12 @@
 classDiagram
     class View {
         + requestUsername()
-        + showUserData(User)
-        + showError(Error)
+        + showUserData(User user)
+        + showError(Error error)
     }
 
     class DAOUser {
-        + getUserByUsername(username)
+        + getUserByUsername(String username) : User / Error
     }
 
     class User {
