@@ -1,0 +1,23 @@
+flowchart TD;
+    A[Benvinguda] --> B[Login]
+    B -->|Credencials correctes| D[Home] 
+    subgraph Login
+    B -->|Credencials incorrectes| L[Recuperació Credencials]
+    B -->|Nou usuari| C[Registre]
+    C -->|Conta creada| B
+    %%L --> B
+    
+    end
+    subgraph Home
+    D --> E[Child List]
+    D --> F[Dades Usuari]
+    D --> N[Alertes]
+    D --> G[Configuració]
+    end
+    subgraph Child Details
+    E --> H[Child]
+    H --> I[Dades Mèdiques]
+    H --> J[Progrés Tapat]
+    J --> M[Jornada diària]
+    H --> K[Cuidadors]
+    end
