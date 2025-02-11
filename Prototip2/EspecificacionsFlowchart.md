@@ -1,4 +1,4 @@
-|Benvinguda
+| Benvinguda
 
 |Login:
 - Desc: Pantalla per iniciar sessió. Pots introduir les dades o escollir crear una conta nova si no en tens.
