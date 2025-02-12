@@ -39,13 +39,13 @@
 - Info Vista: None
 
 > Child List:
-- Desc: Pantalla amb la llista de nens sota el càrrec del cuidador i un botó per accedir als detalls de cada un en especific
+- Desc: Pantalla amb la llista de nens sota el càrrec del cuidador i un botó per accedir als detalls de cada un en especific. Per afegir un nen nou a càrrec de l'usuari podrà afegir-lo a través d'un botó que en clicar et permet completar les credencials del nen si ets el tutor, o bé el tutor o un cuidador principal podrà afegir un nou cuidador a un nen un cop dins de la seva pantalla i això farà que aparegui automàticament en la llista del nou cuidador.
 - Input: Click al botó per accedir a les dades del nen que vols veure en detall
 - Info Vista: Llista de nens adscrits a l'usuari
 
 > Child:
-- Desc: Pantalla amb les dades en més detall del nen. Permet l'accés a altres especificacions
-- Input: None
+- Desc: Pantalla amb les dades en més detall del nen. Permet l'accés a altres especificacions. Si ets un cuidador principal o el tutor del nen (és a dir, si tens un rol amb suficients permissos), et sortirà també una opció per afegir un nou cuidador a càrrec del nen.
+- Input: Credencials del nou cuidador que vols linkar
 - Info Vista: Tutor del nen, cuidadors, metge, dades personals
 
 > Dades Mèdiques:
@@ -54,7 +54,7 @@
 - Info Vista: Tractament adjuntat al nen, dades del seu metge, dades del nen del qual es volen les dades mèdiques
 
 > Cuidadors: 
-- Desc: Pantalla amb les dades dels cuidadors del nen, com els credencials, el seu rol, missatges, etc
+- Desc: Pantalla amb les dades dels cuidadors del nen, com els credencials, el seu rol, missatges, etc. 
 - Input: None
 - Info Vista: Cuidadors a càrrec del nen, dades dels cuidadors
 
