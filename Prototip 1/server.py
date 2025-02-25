@@ -11,7 +11,7 @@ class User:
         self.email=email
 
     def __str__ (self):
-        print("User ID: " + str(self.id) + "| Username: " + self.username)
+        return "User ID: " + str(self.id) + " | Username: " + self.username + " | Email: " + self.email
 
 # Dades d'exemple
 listUsers= [
@@ -29,12 +29,12 @@ class DAO_Users:
         for u in listUsers:
             if (u.username == username):
                 return u
-        
-        else:
-            return None
+        return None
 
 # Inicialitzar DAOs            
 daoUser = DAO_Users()
+#print(daoUser.getUserByUsername("usuari1"))
+
 
 # Rutes del Servei Web
 # --------------------

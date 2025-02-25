@@ -8,7 +8,7 @@ class User:
         self.email=email
 
     def __str__ (self):
-        return "User ID: " + str(self.id) + "| Username: " + self.username
+        return "User ID: " + str(self.id) + " | Username: " + self.username + " | Email: " + self.email
     
 class Error:
     def __init__(self, code, description):
@@ -20,7 +20,7 @@ class Error:
     
 class DAOUser:
     def getUserByUsername(username):
-        response = requests.get(f'http://localhost:10050/prototip1/getuser?username={username}')  # El DAO rep el username i fa una Request HTTP de tipus GET al endpoint indicat
+        response = requests.get(f'http://localhost:10050/prototip/getuser/{username}')  # El DAO rep el username i fa una Request HTTP de tipus GET al endpoint indicat
         
         if response.status_code == 200: # Si la resposta es existosa, es converteix les dades del user que envia el server a format JSON i es guarden en la variable userData
             userData = response.json()
@@ -41,12 +41,17 @@ class View:
         user = DAOUser.getUserByUsername(user)
         if (user):
             print("*--- User info ---*")
-            print(user.__str__)
+            print(f"User Info: {user}")
         else:
             print("ERROR: User not found")
+
+if __name__ == "__main__":
+    username = View.getUsernameByConsole()
+    View.showUserData(username)
     
     # def showErrorData(error):
     #    return error
+
 
 
 

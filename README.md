@@ -1,4 +1,4 @@
-# Tapatapp DEFINITIVO
+# Tapatapp
 ---
 [Descripció del Projecte](descTapatApp.md)
 

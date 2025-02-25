@@ -1,0 +1,45 @@
+ classDiagram
+    class View {
+        + requestUsername(): String username
+        + requestPassword(): String password
+        + loginUser(String username, String password)
+        + showUserData()
+        + showChildData()
+        + showTapData()
+    }
+
+    class DAOUser {
+        + getUserByCredentials(String username, String password): User / None
+    }
+
+    class User {
+        + String username
+        + String email
+        + String password
+    }
+
+    class DAOChild {
+        + getChildByUser(User user): Child / None
+    }
+
+    class Child {
+        + String child_name
+        + String state
+        + Tap last_tap
+    }
+
+    class Tap {
+        + int sleep_total
+        + int time_slept
+        + int time_remaining
+        + Date start_date
+        + Date end_date
+    }
+
+    View --> DAOUser: requests user data
+    DAOUser --> User: retrieves user data
+    DAOUser --> View: returns user data if found
+    View --> DAOChild: requests child data 
+    DAOChild --> Child: retrieves child data 
+    DAOChild --> View: returns child data if found
+    DAOChild --> Tap: retrieves all taps data <br> OR specific ones 

@@ -1,0 +1,44 @@
+classDiagram
+    class Webservice {
+        + requestUsername(): String username
+        + requestPassword(): String password
+    }
+
+    class DAOUser {
+        + User[] listUsers
+        + getUserByCredentials(String username, String password): User / None
+    }
+
+    class User {
+        + String username
+        + String email
+        + String password
+    }
+
+    class DAOChild {
+        + Child[] listChilds
+        + getChildByUser(User user): Child / None
+    }
+
+    class Child {
+        + int child_id
+        + String child_name
+        + String state
+        + Tap last_tap
+    }
+
+    class Tap {
+        + int sleep_total
+        + int time_slept
+        + int time_remaining
+        + Date start_date
+        + Date end_date
+    }
+
+    Webservice --> DAOUser: requests user data
+    DAOUser --> User: retrieves user data
+    DAOUser --> Webservice: returns user data if found
+    Webservice --> DAOChild: requests child data 
+    DAOChild --> Child: retrieves child data 
+    DAOChild --> Webservice: returns child data if found
+    DAOChild --> Tap: retrieves all taps data <br> OR specific ones 
