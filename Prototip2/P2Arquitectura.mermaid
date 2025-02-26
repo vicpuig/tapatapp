@@ -1,0 +1,18 @@
+flowchart LR;
+    A[View]
+    A <--> B[DAOUser] 
+    B <-->|HTTP Request/Response| C[WebService]
+    C <--> D[DAOUser]
+    D <--> E[BBDD]
+    A <--> F[DAOChild]
+    F <-->|HTTP Request/Response| C
+    C <--> G[DAOChild]
+    G <--> E 
+
+    classDef Frontend fill:#D6EAF8,stroke:#333,stroke-width:2px;
+    classDef Backend fill:#F9EBEA,stroke:#333,stroke-width:2px;
+    classDef BBDD fill:#F7DC6F,stroke:#333,stroke-width:2px; 
+
+    class A,B,F Frontend;
+    class C,D,G Backend;
+    class E BBDD;

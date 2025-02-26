@@ -3,9 +3,9 @@
         + requestUsername(): String username
         + requestPassword(): String password
         + loginUser(String username, String password)
-        + showUserData()
-        + showChildData()
-        + showTapData()
+        + showUserInfo(User user)
+        + showChildInfo(Child child)
+        + showTapInfo(Tap tap)
     }
 
     class DAOUser {
@@ -16,24 +16,30 @@
         + String username
         + String email
         + String password
+        + __str__(): String
     }
 
     class DAOChild {
-        + getChildByUser(User user): Child / None
+        + getChildByUsername(User user): Child / None
+        + getAllTaps(Child child): Tap[]
+        + getTapById(int tap_id): Tap / None
     }
 
     class Child {
         + String child_name
         + String state
         + Tap last_tap
+        + __str__(): String
     }
 
     class Tap {
+        + int tap_id
         + int sleep_total
         + int time_slept
         + int time_remaining
         + Date start_date
         + Date end_date
+        + __str__(): String
     }
 
     View --> DAOUser: requests user data

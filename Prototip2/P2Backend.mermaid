@@ -1,12 +1,14 @@
 classDiagram
     class Webservice {
-        + requestUsername(): String username
-        + requestPassword(): String password
+        + getUserByCredentials(String username, String password): User / None
+        + getChildByUser(String username): Child / None
+        + getTapByChild(int child_id, int tap_id): Tap / None
+        + getAllTaps(int child_id): Tap[]
     }
 
     class DAOUser {
         + User[] listUsers
-        + getUserByCredentials(String username, String password): User / None
+        + getUserByCredentials(String username, String password): dict / None
     }
 
     class User {
@@ -17,7 +19,9 @@ classDiagram
 
     class DAOChild {
         + Child[] listChilds
-        + getChildByUser(User user): Child / None
+        + getChildByUser(String username): dict / None
+        + getTapById(int child_id, int tap_id): dict / None
+        + getAllTaps(int child_id): list
     }
 
     class Child {
@@ -28,6 +32,7 @@ classDiagram
     }
 
     class Tap {
+        + int id
         + int sleep_total
         + int time_slept
         + int time_remaining
