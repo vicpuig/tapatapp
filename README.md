@@ -22,3 +22,6 @@
 - Code 400 No trobat: {"error":"No trobat"} -> Quan no introdueixes cap parametre. <br>
 - Code 404 No trobat: {"error":"No trobat"} -> Quan introdueixes un usuername que no correspon als de la llisa d'Usuaris <br>
 - Code 500 Error de server: {"error": "Error inesperat","detalls":str(e)} -> Quan peta el servidor <br>
+
+## Prototip 2:
+[Informació Prototip 2](prototip2.md)
