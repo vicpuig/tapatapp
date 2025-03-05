@@ -2,22 +2,22 @@
 ---
 ## Wireframe sencer de l'App
     
-![Wireframes]()
+![Wireframes](/img/Wireframes.png)
 
 [Especificacions de cada pantalla](/Prototip2/EspecificacionsWireframe.md)
 
 ## Descripcion de implementacion Prototipo2
 En aquest segon prototip, implementarem una versió reduïda de les principals funcionalitats de l'aplicació. Concretament, l'objectiu és aconseguir un sistema de login funcional que permeti accedir a una conta a través de la qual pots comprovar la informació dels nens associats a l'usuari i la informació dels taps de cada nen.
 
-## Charts
 ---
+## Charts
 ### Arquitectura del Prototip
-![Arquitectura]()
+![Arquitectura](/img/Arquitectura.png)
 
 ### Diagrama de classes del Frontend
-![DiagramaFrontend]()
+![DiagramaFrontend](/img/ClassesFrontend.png)
 ### Diagrama de classes del Backend
-![DiagramaBackend]()
+![DiagramaBackend](img/ClassesBackend.png)
 
 ### Altres diagrames menors del projecte: 
 [Arquitectura i flux del Frontend](Prototip2/P2ArquitecturaFrontend.mermaid)
