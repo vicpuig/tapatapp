@@ -20,6 +20,6 @@ En aquest segon prototip, implementarem una versió reduïda de les principals f
 ![DiagramaBackend](/img/ClassesBackend.png) <br>
 
 ### Altres diagrames menors del projecte: 
-[Arquitectura i flux del Frontend](Prototip2/P2ArquitecturaFrontend.mermaid) <br>
-[Arquitectura i flux del Backend](Prototip2/P2ArquitecturaBackend.mermaid) <br>
+[Arquitectura i flux del Frontend](/Prototip2/P2ArquitecturaFrontend.mermaid) <br>
+[Arquitectura i flux del Backend](P2ArquitecturaBackend.mermaid) <br>
 [Lògica i flux del Prototip 2](Prototip2/P2Logica.mermaid) <br>
