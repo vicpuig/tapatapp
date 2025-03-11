@@ -24,4 +24,4 @@
 - Code 500 Error de server: {"error": "Error inesperat","detalls":str(e)} -> Quan peta el servidor <br>
 
 ## Prototip 2:
-[Informació Prototip 2](prototip2.md)
+[Informació Prototip 2](Prototip2/prototip2.md)
