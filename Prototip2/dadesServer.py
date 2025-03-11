@@ -31,7 +31,8 @@ class Child:
 
 children = [
     Child(id=1, child_name="Carol Child", sleep_average=8, treatment_id=1, time=6),
-    Child(id=2, child_name="Jaco Child", sleep_average=10, treatment_id=2, time=6)
+    Child(id=2, child_name="Jaco Child", sleep_average=10, treatment_id=2, time=6),
+    Child(id=3, child_name="Carol Child 2", sleep_average=6, treatment_id=1, time=5)
 ]
 
 class Tap:
@@ -48,14 +49,15 @@ class Tap:
         
 taps = [
     Tap(id=1, child_id=1, status_id=1, user_id=1, init="2024-12-18T19:42:43", end="2024-12-18T20:42:43"),
-    Tap(id=2, child_id=2, status_id=2, user_id=2, init="2024-12-18T21:42:43", end="2024-12-18T22:42:43")
+    Tap(id=2, child_id=3, status_id=2, user_id=2, init="2024-12-18T21:42:43", end="2024-12-18T22:42:43")
 ]
 
 relation_user_child = [
     {"user_id": 1, "child_id": 1, "rol_id": 1},
     {"user_id": 1, "child_id": 1, "rol_id": 2},
     {"user_id": 2, "child_id": 2, "rol_id": 1},
-    {"user_id": 2, "child_id": 2, "rol_id": 2}
+    {"user_id": 2, "child_id": 2, "rol_id": 2},
+    {"user_id": 1, "child_id": 3, "rol_id": 2}
 ]
 
 class Role:
