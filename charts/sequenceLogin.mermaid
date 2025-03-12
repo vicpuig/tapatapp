@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant Usuari
+    participant App
+    participant Webservice
+    participant BBDD
+   
+    Usuari->>App: Introdueix credencials
+    App->>Webservice: Transmet credencials
+    Webservice->>BBDD: Verifica credencials
+
+    BBDD-->Webservice: Response (credencials vàlids o no)
+
+    alt Credencials vàlids
+        Webservice-->App: Login OK + Transmet Token únic
+        App-->Usuari: Inici de sessió permés
+    else Credencials invàlids
+        Webservice-->App: Login Error + Transmet Error Code
+        App-->Usuari: Show Error
+    else Login amb Token
+        App->>Webservice: Transmet Token associat amb l'Usuari
+        Webservice->>BBDD: Comprova Token
+        BBDD-->Webservice: Token Coincident
+        Webservice->App: Login Automàtic
+        App->Usuari: Login Automàtic
+    end
