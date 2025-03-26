@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+
+actor "Usuari" as generic_user
+actor "Tutor" as tutor_user
+actor "Cuidador" as cuidador_user
+tutor_user -|> generic_user
+cuidador_user -|> generic_user
+
+usecase "Login" as UC1
+usecase "Add Child" as UC2
+usecase "Consulta Child" as UC3
+usecase "Add Taps Child" as UC4
+usecase "Consulta Taps Child" as UC5
+usecase "Consulta User" as UC6
+usecase "Càlcul Temps Pegat" as UC7
+usecase "Consulta Child" as UC8
+
+
+generic_user --> UC1
+tutor_user --> UC2
+tutor_user --> UC3
+tutor_user --> UC4
+tutor_user --> UC5
+cuidador_user --> UC3
+cuidador_user --> UC4
+cuidador_user --> UC5
+UC3 <-- UC6
+UC4 <-- UC7
+UC5 <-- UC8
+
+@enduml
